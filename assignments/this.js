@@ -12,7 +12,9 @@
 */
 
 // Principle 1
+function thisExample(name) {
     return this.name;
+}
 // code example for Window Binding
 
 // Principle 2
@@ -35,6 +37,18 @@ function GameObject(obInfo) {
     this.dimensions = obInfo.dimensions;
     this.name = obInfo.name;
   }
+
+  const newObj = new GameObject({
+    createdAt : `now`,
+    dimensions: {
+      length: 1,
+      width: 2,
+      height: 4,
+    },
+    name : 'Objy'
+  });
+
+
 // code example for New Binding
 
 // Principle 4
